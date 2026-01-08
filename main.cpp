@@ -17,6 +17,8 @@ int main()
     double deltatime = 0.01;
     int step = 0;
 
+    std::ofstream outfile("data.txt");
+
     for (; step < 100; ++step)
         {
             p1.x += p1.vx * deltatime;

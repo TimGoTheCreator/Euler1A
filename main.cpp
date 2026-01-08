@@ -1,4 +1,5 @@
 #include<iostream>
+#include<fstream>
 
 struct Particle {
     double x,y;
@@ -24,9 +25,11 @@ int main()
             p2.y += p2.vy * deltatime;
 
             
-            std::cout << "Step " << step << ": "
+            outfile << "Step " << step << ": "
                       << "p1(" << p1.x << ", " << p1.y << ") "
                       << "p2(" << p2.x << ", " << p2.y << ")\n";
 
         }
+
+        outfile.close();
 }
